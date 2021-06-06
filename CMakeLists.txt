@@ -3,5 +3,5 @@ project (myproject)
  
 find_package (Eigen3 3.3 REQUIRED NO_MODULE)
  
-add_executable (example cubicFit.cpp)
+add_executable (example polyfit.cpp)
 target_link_libraries (example Eigen3::Eigen)

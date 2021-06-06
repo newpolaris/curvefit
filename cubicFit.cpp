@@ -1,5 +1,5 @@
 // https://himbopsa.tistory.com/13
-//
+
 #include <iostream>
 #include <fstream>
 #include <Eigen/Dense>
@@ -51,7 +51,7 @@ int main() {
 	cout << O[0] << "x3" << " + "   << O[1] << "x2"<< " + " << O[2] << "x1"<< " + " << O[3] << endl;
 	file.close();
 	ofstream result("3-dgree-regression_results.txt");
-	for (int i = 0; i < N; i++) {
+	for (int i = 0; i < N; i++) 
 		result << round(0.033 * i * 1000) / 1000 << "\t" << O[0] * round(0.033 * i * 1000) / 1000 * round(0.033 * i * 1000) / 1000* round(0.033 * i * 1000) / 1000 +
 			O[1] * round(0.033 * i * 1000) / 1000 * round(0.033 * i * 1000) / 1000 + O[2] * round(0.033 * i * 1000) / 1000+ O[3];
 		result << endl;
